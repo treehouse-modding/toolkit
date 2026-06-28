@@ -1,6 +1,6 @@
-<img src="https://github.com/tmodders/.github/blob/main/assets/logo.svg" align="right" width="64px" height="64px" alt="Icon"/>
+<img src="https://github.com/tmodders/.github/blob/main/assets/logo-background.svg" align="center"/>
 
-# tModders: Toolkit
+# Treehouse: Toolkit
 A collection of practical examples for developing tModLoader mods.
 
 ---
