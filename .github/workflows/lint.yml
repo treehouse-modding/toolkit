@@ -1,0 +1,24 @@
+name: 3
+
+on:
+  push:
+    branches: '**'
+  pull_request:
+    branches: '**'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v5
+
+    - name: Run .NET restore
+      run: dotnet restore
+
+    - name: Run .NET format
+      run: dotnet format style Toolkit.sln --verify-no-changes
