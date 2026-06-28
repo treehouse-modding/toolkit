@@ -10,7 +10,7 @@ namespace Toolkit.Content.Guns;
 /// <summary>
 ///     Provides a practical example of a gun that shoots bullets with a muzzle offset.
 /// </summary>
-public class ExampleMuzzleOffsetGun : ModItem
+public class ExampleMuzzleOffsetGunItem : ModItem
 {
     public override void SetDefaults()
     {

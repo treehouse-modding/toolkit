@@ -8,7 +8,7 @@ namespace Toolkit.Content.Tools;
 /// <summary>
 ///     Provides a practical example of a hammer.
 /// </summary>
-public class ExampleHammer : ModItem
+public class ExampleHammerItem : ModItem
 {
     public override void SetDefaults()
     {

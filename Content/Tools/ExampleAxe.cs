@@ -8,7 +8,7 @@ namespace Toolkit.Content.Tools;
 /// <summary>
 ///     Provides a practical example of an axe.
 /// </summary>
-public class ExampleAxe : ModItem
+public class ExampleAxeItem : ModItem
 {
     public override void SetDefaults()
     {
