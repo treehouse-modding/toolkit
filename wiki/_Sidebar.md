@@ -3,6 +3,11 @@
 * Tiles
     * [[Example Grass]]
 
+# Guides
+
+* World Generation
+    * [[Procedural World Generation]]
+
 # Resources
 
 * Tiles
@@ -12,3 +17,5 @@
 * Player
     * Spriting
         * [[Player Sheets]]
+* Tools
+    * [[Spriting Tools]]
