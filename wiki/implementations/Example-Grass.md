@@ -27,6 +27,9 @@ This guide demonstrates how to create custom grass. By the end of it, you will h
 
 # Creating the Grass
 
+> [!TIP]
+> You can significantly reduce boilerplate by creating reusable utilities or custom systems that automate common tasks when implementing custom grass.
+
 To make a tile behave like grass, several tile sets must be configured. These tile sets control how the grass spreads, merges with neighboring tiles, interacts with world generation, and behaves during tile framing:
 
 ```cs
@@ -203,6 +206,9 @@ private static void UpdateFoliage(int i, int j)
 > Replace `TileID.Plants` and the style values with your own foliage tile type and styles when creating your custom grass.
 
 # Creating the Seeds
+
+> [!TIP]
+> You can significantly reduce boilerplate by creating reusable utilities or custom systems that automate common tasks when implementing custom grass seeds.
 
 Although a placeable item can simply assign `Item.createTile`, doing so would place the grass directly into empty space. Since grass is normally grown by converting existing dirt, override `ModItem::UseItem(Player)` instead and manually replace the targeted tile:
 
