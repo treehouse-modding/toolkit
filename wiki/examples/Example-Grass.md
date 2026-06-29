@@ -1,41 +1,33 @@
 # Summary
 
-This guide demonstrates how to create a custom grass tile. By the end of it, you will have:
+> [!NOTE]
+> [**Click here to view full implementation**](https://github.com/treehouse-modding/toolkit/blob/main/Content/Biomes/ExampleGrass.cs).
+
+* [Prerequisites](#prerequisites)
+* [Introduction](#introduction)
+* [Creating the Grass](#creating-the-grass)
+    * [Effects](#effects)
+    * [Kill](#kill)
+    * [Vines](#vines)
+    * [Foliage](#foliage)
+* [Creating the Seeds](#creating-the-seeds)
+
+# Prerequisites
+
+- [**C#**](https://dotnet.microsoft.com/languages/csharp)
+- [[Items]]
+- [[Tiles]]
+
+# Introduction
+
+This guide demonstrates how to create custom grass. By the end of it, you will have:
 
 - A tile that behaves like grass.
-- An item that converts tiles into your grass.
+- An item that behaves like grass seeds.
 
 # Creating the Grass
 
-## Base
-
-Start by creating an empty `ModTile`. Then, configure its basic properties through `ModTile::SetStaticDefaults()`:
-
-```cs
-public class ExampleGrassTile : ModTile
-{
-    public override void SetStaticDefaults()
-    {
-        Main.tileSolid[Type] = true;
-        Main.tileBlendAll[Type] = true;
-        Main.tileMergeDirt[Type] = true;
-        Main.tileBlockLight[Type] = true;
-
-        AddMapEntry(new Color(255, 255, 255));
-
-        MineResist = 0.5f;
-
-        HitSound = SoundID.Dig;
-        DustType = DustID.Dirt;
-    }
-}
-```
-
-> [!NOTE]
-> The map color, mining resistance, hit sound, and dust effects can be customized to match your own grass.
-## Grass
-
-At this point, the tile is just a regular solid block. To make it behave like grass, several tile sets must be configured. These tile sets control how the grass spreads, merges with neighboring tiles, interacts with world generation, and behaves during tile framing:
+To make a tile behave like grass, several tile sets must be configured. These tile sets control how the grass spreads, merges with neighboring tiles, interacts with world generation, and behaves during tile framing:
 
 ```cs
 public override void SetStaticDefaults()
@@ -74,44 +66,7 @@ public override void SetStaticDefaults()
 }
 ```
 
-## Kill
-
-Unlike most tiles, grass is not normally destroyed when mined. Instead, it reverts to its corresponding dirt tile.
-
-To reproduce this behavior, override `ModTile::KillTile(int, int, ref bool, ref bool, ref bool)`. If the tile is actually being destroyed, replace it with your dirt tile instead:
-
-```cs
-public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
-{
-    // Checks if the tile was meant to be destroyed.
-    if (fail)
-    {
-        return;
-    }
-
-    var tile = Framing.GetTileSafely(i, j);
-
-    // Instead of destroying the tile, we turn the tile into dirt.
-    tile.TileType = ModContent.TileType<ExampleDirtTile>();
-}
-```
-
-> [!NOTE]
-> The `fail` parameters indicates whether the mining attempt has successfully destroyed the tile.
-Explosions require special handling. Since `KillTile` also runs when a tile is destroyed by an explosion, your grass would incorrectly convert into dirt instead of being removed.
-
-To preserve the vanilla behavior, override `ModTile::CanExplode(int, int)` and explicitly destroy the tile:
-
-```cs
-public override bool CanExplode(int i, int j)
-{
-    WorldGen.KillTile(i, j);
-
-    return true;
-}
-```
-
-## Visuals
+## Effects
 
 Walking across grass usually produces small dust particles. This effect can be reproduced by overriding `ModTile::FloorVisuals(Player)`:
 
@@ -141,9 +96,47 @@ public override void FloorVisuals(Player player)
 }
 ```
 
+## Kill
+
+Unlike most tiles, grass is not normally destroyed when mined. Instead, it reverts to its corresponding dirt tile.
+
+To reproduce this behavior, override `ModTile::KillTile(int, int, ref bool, ref bool, ref bool)`. If the tile is actually being destroyed, replace it with your dirt tile instead:
+
+```cs
+public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
+{
+    // Checks if the tile was meant to be destroyed.
+    if (fail)
+    {
+        return;
+    }
+
+    var tile = Framing.GetTileSafely(i, j);
+
+    // Instead of destroying the tile, we turn the tile into dirt.
+    tile.TileType = ModContent.TileType<ExampleDirtTile>();
+}
+```
+
+> [!NOTE]
+> The `fail` parameters indicates whether the mining attempt has successfully destroyed the tile.
+
+Explosions require special handling. Since `KillTile` also runs when a tile is destroyed by an explosion, your grass would incorrectly convert into dirt instead of being removed.
+
+To preserve the vanilla behavior, override `ModTile::CanExplode(int, int)` and explicitly destroy the tile:
+
+```cs
+public override bool CanExplode(int i, int j)
+{
+    WorldGen.KillTile(i, j);
+
+    return true;
+}
+```
+
 ## Vines
 
-Grass can periodically grow vines below itself.
+Grass can grow vines below itself.
 
 The following method attempts to place a vine beneath the grass tile whenever the placement conditions are met, and must be called in `ModTile::RandomUpdate(int, int)`:
 
@@ -152,7 +145,6 @@ private static void UpdateVines(int i, int j)
 {
     const int chance = 15;
 
-    // Checks whether the tiles meet the conditions to place a vine below the tile.
     if (!WorldGen.genRand.NextBool(chance) || !WorldGen.GrowMoreVines(i, j))
     {
         return;
@@ -170,18 +162,18 @@ private static void UpdateVines(int i, int j)
 
 > [!TIP]
 > Replace `TileID.Vines` with your own vine tile type when creating your custom grass.
+
 ## Foliage
 
 Similarly, grass can grow decorative plants above itself.
 
-The following method attempts to place foliage whenever the placement conditions are met, and must be called in `ModTile::RandomUpdate(int, int)`:
+The following method attempts to place a plant above the grass tile whenever the placement conditions are met, and must be called in `ModTile::RandomUpdate(int, int)`:
 
 ```cs
 private static void UpdateFoliage(int i, int j)
 {
     const int chance = 15;
 
-    // Checks whether the tiles meet the chance conditions to place a foliage above the tile.
     if (!WorldGen.genRand.NextBool(chance))
     {
         return;
@@ -189,7 +181,6 @@ private static void UpdateFoliage(int i, int j)
 
     var above = Framing.GetTileSafely(i, j - 1);
 
-    // Checks whether the tile above the grass meets the conditions to place foliage above the tile.
     if (above.HasTile || above.LiquidAmount > 0)
     {
         return;
@@ -210,41 +201,8 @@ private static void UpdateFoliage(int i, int j)
 
 > [!TIP]
 > Replace `TileID.Plants` and the style values with your own foliage tile type and styles when creating your custom grass.
+
 # Creating the Seeds
-
-## Base
-
-Create a `ModItem` and configure its default properties through `ModItem::SetDefaults()`:
-
-```cs
-public override void SetDefaults()
-{
-    Item.maxStack = Item.CommonMaxStack;
-
-    Item.consumable = true;
-
-    Item.autoReuse = true;
-
-    // Indicates that the item's swing direction will change accordingly to the player's direction.
-    Item.useTurn = true;
-
-    // Matches the dimensions of the item's texture.
-    Item.width = 16;
-    Item.height = 16;
-
-    // Sets the item's use time to 15, which means the item will take 15 frames to be used.
-    Item.useTime = 15;
-
-    // Sets the item's use animation to 15, which means the item's animation will last for 15 frames.
-    Item.useAnimation = 15;
-
-    Item.useStyle = ItemUseStyleID.Swing;
-}
-```
-
-## Placement
-
-The final step is allowing the seeds to convert dirt into your grass.
 
 Although a placeable item can simply assign `Item.createTile`, doing so would place the grass directly into empty space. Since grass is normally grown by converting existing dirt, override `ModItem::UseItem(Player)` instead and manually replace the targeted tile:
 
