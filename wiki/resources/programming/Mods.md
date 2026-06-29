@@ -14,6 +14,9 @@ This page lists popular tModLoader mods alongside their license, availability, s
 
 # Mods
 
+> [!NOTE]
+> If your mod is listed incorrectly or you would prefer not to have it included, please contact us through our Discord server.
+
 | Mod | License | Availability | Status | Repository |
 | --- | --- | --- | --- | --- |
 | Calamity | ARR | Source Available | Active | https://github.com/CalamityTeam/CalamityModPublic/tree/1.4.4 |
