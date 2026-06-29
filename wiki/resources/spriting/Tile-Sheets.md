@@ -4,40 +4,44 @@ A collection of tile sheet templates for Terraria.
 
 ## Block
 
-![Block tile template](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/tile-template.png)
+![Block](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/tile-template.png)
 
 ## Wall
 
-![Wall template](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/wall-template.png)
+![Wall](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/wall-template.png)
 
-## Grass
+## Ambient
 
-![Grass template](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/grass-template.png)
+### Grass
 
-## Foliage
+![Grass](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/grass-template.png)
 
-![Foliage template](https://github.com/treehouse-modding/toolkit/blob/main/main/assets/resources/tiles/foliage-template.png)
+### Foliage
 
-## Tall Foliage
+![Foliage](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/foliage-template.png)
 
-![Tall foliage template](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/tall-foliage-template.png)
+### Tall Foliage
 
-## Thorn
+![Tall Foliage](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/tall-foliage-template.png)
 
-![Thorn template](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/thorn-template.png)
+### Thorn
 
-## Vine
+![Thorn](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/thorn-template.png)
 
-![Vine template](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/vine-template.png)
+### Vine
+
+![Vine](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/vine-template.png)
 
 ## Tree
 
-![Tree template](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/tree-template.png)
+### Trunk
 
-## Tree Branches
+![Tree](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/tree-template.png)
 
-![Tree branches template](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/tree-branches-template.png)
+### Branches
 
-## Tree Tops
+![Tree Branches](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/tree-branches-template.png)
 
-![Tree tops template](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/tree-tops-template.png)
+### Tops
+
+![Tree Tops](https://github.com/treehouse-modding/toolkit/blob/main/assets/resources/tiles/tree-tops-template.png)
