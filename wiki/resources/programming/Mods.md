@@ -1,6 +1,6 @@
 # Introduction
 
-This page lists popular tModLoader mods together with their license, availability, and repository.
+This page lists popular tModLoader mods alongside their license, availability, status and repository.
 
 # Availability
 
@@ -17,7 +17,7 @@ This page lists popular tModLoader mods together with their license, availabilit
 | Mod | License | Availability | Status | Repository |
 | --- | --- | --- | --- | --- |
 | Calamity | ARR | Source Available | Active | https://github.com/CalamityTeam/CalamityModPublic/tree/1.4.4 |
-| Calamity Fables | ARR | Open Source | Active | https://github.com/IbanPlay/FablesRelease/tree/main |
+| Calamity Fables | ARR | Source Available | Active | https://github.com/IbanPlay/FablesRelease/tree/main |
 | Spirit | ARR | Open Source | Active | https://github.com/PhoenixBladez/SpiritMod |
 | Spirit Reforged | GPL-3.0 | Open Source | Active | https://github.com/GabeHasWon/SpiritReforged |
 | Fargo's Souls | MIT | Open Source | Active | https://github.com/Fargo-Team/FargosSoulsMod |
