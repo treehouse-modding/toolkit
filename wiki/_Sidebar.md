@@ -1,9 +1,11 @@
-![Icon](https://github.com/treehouse-modding/.github/blob/main/assets/icon-background.svg)
+# Examples
 
-### Examples
+## Tiles
 
 * [Example Grass](https://github.com/treehouse-modding/toolkit/wiki/Example-Grass)
 
-### Resources
+# Resources
+
+## Tiles
 
 * [Chest Frames](https://github.com/treehouse-modding/toolkit/wiki/Chest-Frames)
