@@ -3,7 +3,7 @@
 ## `TileID.Containers`
 
 | Chest | Number | Frame | Type |
-| --- | ---: | ---: | --- |
+| --- | --- | --- | --- |
 | Wooden | 0 | `0 * 36` | `TileID.Containers` |
 | Gold | 1 | `1 * 36` | `TileID.Containers` |
 | Gold Locked | 2 | `2 * 36` | `TileID.Containers` |
@@ -62,4 +62,6 @@
 
 ## `TileID.Containers2`
 
+| Chest | Number | Frame | Type |
+| --- | --- | --- | --- |
 | Sandstone | 10 | `10 * 36` | `TileID.Containers2` |
