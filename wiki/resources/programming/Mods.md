@@ -23,7 +23,7 @@ This page lists popular tModLoader mods together with their license, availabilit
 | Fargo's Souls | MIT | Open Source | Active | https://github.com/Fargo-Team/FargosSoulsMod |
 | Fargo's Mutant | MIT | Open Source | Active | https://github.com/Fargo-Team/FargosMutantMod |
 | Daybreak | AGPL-3.0 | Open Source | Active | https://github.com/gold-meridian/daybreak-mod |
-| Radiant Revival | ARR | Open Source | Active | https://github.com/gold-meridian/radiant-revival |
+| Radiant Revival | ARR | Source Available | Active | https://github.com/gold-meridian/radiant-revival |
 | Starlight River | GPL-3.0 | Open Source | Active | https://github.com/ProjectStarlight/StarlightRiver |
 | The Stars Above | AGPL-3.0 | Open Source | Active | https://github.com/ThePaperLuigi/The-Stars-Above |
 | Macrocosm | ARR | Open Source | Active | https://github.com/MechanicPluto24/Terraria_Macrocosm |
