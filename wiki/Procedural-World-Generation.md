@@ -1,39 +1,46 @@
-# Intro to Procedural WorldGen using `WorldUtils.Gen`
-> written by: maxie
+# Intro to Procedural World Generation using `WorldUtils.Gen`
+> Written by: Maxie
 
-### Prerequisites:
-> This guide assumes you are familiar with C# syntax and terms, and basic world generation code.
-### Other resources:
- - The original tModLoader Wiki guide: https://github.com/tModLoader/tModLoader/wiki/World-Generation#procedural-syntax
+## Prerequisites
+* [**C#**](https://dotnet.microsoft.com/languages/csharp)
 
-One approach to writing world generation code is to use Vanilla's *procedural syntax*, using the method `WorldUtils.Gen`. It's what Vanilla uses for a number of more complex, and more recent structures, like the Sword Shrine and Living Mahogany Trees. It uses a declarative syntax that allows you to write worldgen code quickly and effectively. Let's take a look:
+One approach to writing world generation code is to use Vanilla's procedural syntax through `WorldUtils::Gen()`. It's what Vanilla uses for a number of more complex, and more recent structures, like the Sword Shrine and Living Mahogany Trees. It uses a declarative syntax that allows you to write worldgen code quickly and effectively. Let's take a look:
 
 ## `WorldUtils.Gen`
 
 ```cs
-Point point = new Point(i, j);
+var point = new Point(i, j);
+
 WorldUtils.Gen(point, new Shapes.Circle(8, 8), new Actions.SetTile(TileID.Dirt));
 ```
+
 The above code takes a point and places dirt in a circle with a radius of 8 tiles. 
 The main attraction here is that `WorldUtils.Gen` method, as it's what actually runs the procedure. You can see that it takes in 3 arguments: A point, a Shape, and an Action. 
 The **Shape** essentially constructs a collection of points, running the **Action** at each point.
 You can add in your own custom shapes and actions, but vanilla already has most of them, including some interesting ones. 
 
 
-## Using Shapes, Modifiers, and Actions for Fun and Recreation
-Let's look at a more advanced example...
+## Using Shapes, Modifiers, and Actions...
+
+Let's look at a more advanced example:
 
 ```cs
-Point point = new Point(i, j);
-WorldUtils.Gen(point, new Shapes.Circle(8, 8), Actions.Chain(
-  new Modifiers.Blotches(),
-  new Actions.ClearTile(),
-  new Actions.SetTileKeepWall(TileID.Dirt, true, true)
-));
+var point = new Point(i, j);
+
+WorldUtils.Gen
+(
+    point, 
+    new Shapes.Circle(8, 8), 
+    Actions.Chain(
+      new Modifiers.Blotches(),
+      new Actions.ClearTile(),
+      new Actions.SetTileKeepWall(TileID.Dirt, true, true)
+    )
+);
 ```
 
->### Notice:
->Actions.Chain is a static method, while most other actions are classes that need to be instantiated. Sometimes, I accidentally write `new Actions.Chain`, and it's a mild inconveinence. Hopefully you won't make that same mistake now!
+> [!NOTE]
+> `Actions::Chain()` is a `static` method, while most other `Action` classes need to be instantiated.
 
 The key differences with this example is that instead of using just one Action, we use the method `Actions.Chain` to chain (wow!) multiple actions together, as well as using a new kind of Action, a Modifier. The only difference between `Actions` and `Modifiers` is the class they're a part of. They work identically under the hood, but the `Modifiers` class is generally reserved for Actions that *modify the Shape* that subsequent actions apply to, either by terminating the chain (skipping all subsequent actions) or by adding new tiles to the shape. In this example, we use the `Blotches` modifier, which randomly adds small spots to our shape, giving it a more lumpy, natural look.
 Now that you know how to use procedural WorldGen, I would recommend using your IDE to peruse through some of the Shapes, Modifiers, and Actions that vanilla provides. There's a lot of neat stuff you can do with just the stuff that vanilla provides. 
@@ -68,6 +75,7 @@ WorldUtils.Gen(point + new Point(20, 0), new ModShapes.All(shape), Actions.Chain
 ```
 
 ModShapes also includes some more interesting ways to use ShapeData. Maybe you want to give your dirt blob a ruby outline:
+
 ```cs
 WorldUtils.Gen(point), new ModShapes.OuterOutline(shape), Actions.Chain(
   new Actions.SetTileKeepWall(TileID.RubyGemspark, true, true)
@@ -95,3 +103,6 @@ WorldUtils.Gen(point + new Point(20, 0), new ModShapes.All(shape), Actions.Chain
 Counterintuitively, it can be much more freeing to write using just a single custom action if you want more complex logic, as the standard action chains dont have any methods for complex control flow.
 
 >TODO: Add section for optimizing usage after profiling a few methods.
+
+## Alternative Sources
+* [**tModLoader: World Generation**](https://github.com/tModLoader/tModLoader/wiki/World-Generation#procedural-syntax)

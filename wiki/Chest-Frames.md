@@ -1,12 +1,14 @@
 # Summary
 
+## `TileID.Containers`
+
 | Chest | Number | Frame | Type |
 | --- | ---: | ---: | --- |
 | Wooden | 0 | `0 * 36` | `TileID.Containers` |
 | Gold | 1 | `1 * 36` | `TileID.Containers` |
-| Locked Gold | 2 | `2 * 36` | `TileID.Containers` |
-| Obsidian | 3 | `3 * 36` | `TileID.Containers` |
-| Locked Obsidian | 4 | `4 * 36` | `TileID.Containers` |
+| Gold Locked | 2 | `2 * 36` | `TileID.Containers` |
+| Shadow | 3 | `3 * 36` | `TileID.Containers` |
+| Shadow Locked | 4 | `4 * 36` | `TileID.Containers` |
 | Barrel | 5 | `5 * 36` | `TileID.Containers` |
 | Trash Can | 6 | `6 * 36` | `TileID.Containers` |
 | Ebonwood | 7 | `7 * 36` | `TileID.Containers` |
@@ -25,4 +27,39 @@
 | Crimson Dungeon | 20 | `20 * 36` | `TileID.Containers` |
 | Hallowed Dungeon | 21 | `21 * 36` | `TileID.Containers` |
 | Frozen Dungeon | 22 | `22 * 36` | `TileID.Containers` |
+| Jungle Dungeon Locked | 23 | `23 * 36` | `TileID.Containers` |
+| Corruption Dungeon Locked | 24 | `24 * 36` | `TileID.Containers` |
+| Crimson Dungeon Locked | 25 | `25 * 36` | `TileID.Containers` |
+| Hallowed Dungeon Locked | 26 | `26 * 36` | `TileID.Containers` |
+| Frozen Dungeon Locked | 27 | `27 * 36` | `TileID.Containers` |
+| Dynasty | 28 | `28 * 36` | `TileID.Containers` |
+| Honey | 29 | `29 * 36` | `TileID.Containers` |
+| Steampunk | 30 | `30 * 36` | `TileID.Containers` |
+| Palm Wood | 31 | `31 * 36` | `TileID.Containers` |
+| Glowing Mushroom | 32 | `32 * 36` | `TileID.Containers` |
+| Boreal Wood | 33 | `33 * 36` | `TileID.Containers` |
+| Slime | 34 | `34 * 36` | `TileID.Containers` |
+| Green Dungeon | 35 | `35 * 36` | `TileID.Containers` |
+| Green Dungeon Locked | 36 | `36 * 36` | `TileID.Containers` |
+| Pink Dungeon | 37 | `37 * 36` | `TileID.Containers` |
+| Pink Dungeon Locked | 38 | `38 * 36` | `TileID.Containers` |
+| Blue Dungeon | 39 | `39 * 36` | `TileID.Containers` |
+| Blue Dungeon Locked | 40 | `40 * 36` | `TileID.Containers` |
+| Bone | 41 | `41 * 36` | `TileID.Containers` |
+| Cactus | 42 | `42 * 36` | `TileID.Containers` |
+| Flesh | 43 | `43 * 36` | `TileID.Containers` |
+| Cactus | 44 | `44 * 36` | `TileID.Containers` |
+| Pumpkin | 45 | `45 * 36` | `TileID.Containers` |
+| Obsidian | 46 | `46 * 36` | `TileID.Containers` |
+| Spooky | 47 | `47 * 36` | `TileID.Containers` |
+| Glass | 48 | `48 * 36` | `TileID.Containers` |
+| Martian | 49 | `49 * 36` | `TileID.Containers` |
+| Meteorite | 50 | `50 * 36` | `TileID.Containers` |
+| Granite | 51 | `51 * 36` | `TileID.Containers` |
+| Marble | 52 | `52 * 36` | `TileID.Containers` |
+| Crystal | 53 | `53 * 36` | `TileID.Containers` |
+| Golden | 54 | `54 * 36` | `TileID.Containers` |
+
+## `TileID.Containers2`
+
 | Sandstone | 10 | `10 * 36` | `TileID.Containers2` |
