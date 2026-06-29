@@ -1,21 +1,33 @@
-# Implementations
+#### Implementations
 
-* Tiles
+<details open>
+    <summary>Biomes</summary>
+
     * [[Example Grass]]
+</details>
 
-# Guides
+#### Guides
 
-* World Generation
+<details open>
+    <summary>World Generation</summary>
+
     * [[Procedural World Generation]]
+</details>
 
-# Resources
+#### Documentation
 
-* Tiles
+<details open>
+    <summary>Tiles</summary>
+
     * [[Chest Frames]]
-    * Spriting
-        * [[Tile Sheets]]
-* Player
-    * Spriting
-        * [[Player Sheets]]
-* Tools
+</details>
+
+#### Resources
+
+<details open>
+    <summary>Spriting</summary>
+
+    * [[Player Sheets]]
+    * [[Tile Sheets]]
     * [[Spriting Tools]]
+</details>
