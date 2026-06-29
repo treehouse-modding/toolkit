@@ -2,10 +2,10 @@
 
 ## `TileID.Containers`
 
-| Chest | Number | Frame | Type |
+| Chest | Index | Frame | Type |
 | --- | --- | --- | --- |
-| Wooden | 0 | `0 * 36` | `TileID.Containers` |
-| Gold | 1 | `1 * 36` | `TileID.Containers` |
+| Wooden | 0 | `0` | `TileID.Containers` |
+| Gold | 1 | `36` | `TileID.Containers` |
 | Gold Locked | 2 | `2 * 36` | `TileID.Containers` |
 | Shadow | 3 | `3 * 36` | `TileID.Containers` |
 | Shadow Locked | 4 | `4 * 36` | `TileID.Containers` |
@@ -62,6 +62,22 @@
 
 ## `TileID.Containers2`
 
-| Chest | Number | Frame | Type |
+| Chest | Index | Frame | Type |
 | --- | --- | --- | --- |
+| Crystal | 0 | `0` | `TileID.Containers2` |
+| Golden | 1 | `36` | `TileID.Containers2` |
+| Spider | 2 | `2 * 36` | `TileID.Containers2` |
+| Lesion | 3 | `3 * 36` | `TileID.Containers2` |
+| Gold | 4 | `4 * 36` | `TileID.Containers2` |
+| Solar | 5 | `5 * 36` | `TileID.Containers2` |
+| Vortex | 6 | `6 * 36` | `TileID.Containers2` |
+| Nebula | 7 | `7 * 36` | `TileID.Containers2` |
+| Stardust | 8 | `8 * 36` | `TileID.Containers2` |
+| Golf | 9 | `9 * 36` | `TileID.Containers2` |
 | Sandstone | 10 | `10 * 36` | `TileID.Containers2` |
+| Bamboo | 11 | `11 * 36` | `TileID.Containers2` |
+| Desert Dungeon | 12 | `12 * 36` | `TileID.Containers2` |
+| Desert Dungeon Locked | 13 | `13 * 36` | `TileID.Containers2` |
+| Reef | 14 | `14 * 36` | `TileID.Containers2` |
+| Balloon | 15 | `15 * 36` | `TileID.Containers2` |
+| Ash Wood | 16 | `16 * 36` | `TileID.Containers2` |
