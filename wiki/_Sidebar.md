@@ -1,16 +1,14 @@
-# Examples
+# Implementations
 
-## Tiles
-
-* [[Example Grass]]
+* Tiles
+    * [[Example Grass]]
 
 # Resources
 
-## Tiles
-
-* [[Chest Frames]]
-
-### Spriting
-
-* [[Player Sheets]]
-* [[Tile Sheets]]
+* Tiles
+    * [[Chest Frames]]
+    * Spriting
+        * [[Tile Sheets]]
+* Player
+    * Spriting
+        * [[Player Sheets]]
