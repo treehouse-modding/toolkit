@@ -3,9 +3,9 @@ using Terraria.ModLoader;
 
 namespace Toolkit.Content.Tools;
 
-// For more implementation details, visit: https://github.com/treehouse-modding/toolkit/wiki/Tools#hammers
+// For more implementation details, visit: https://github.com/treehouse-modding/toolkit/wiki/Tools#multi-tools
 
-public class ExampleHammerItem : ModItem
+public class ExampleMultitoolItem : ModItem
 {
     public override void SetDefaults()
     {
@@ -21,6 +21,8 @@ public class ExampleHammerItem : ModItem
         Item.width = 16;
         Item.height = 16;
         
+        Item.pick = 50;
+        Item.axe = 5;
         Item.hammer = 50;
 
         Item.UseSound = SoundID.Item1;
