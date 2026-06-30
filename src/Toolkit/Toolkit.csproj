@@ -1,0 +1,5 @@
+<Project Sdk="Tomat.Terraria.ModLoader.Sdk/2.1.0">
+
+    <Import Project="../../common/Mod.targets" />
+
+</Project>

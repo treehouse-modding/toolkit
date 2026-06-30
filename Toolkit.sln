@@ -1,16 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolkit", "Toolkit.csproj", "{63A599EB-F747-4129-8371-2DC7A0600AB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toolkit", "src\Toolkit\Toolkit.csproj", "{7DB8C00E-B855-41E8-BC18-C690F2FAA027}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{63A599EB-F747-4129-8371-2DC7A0600AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63A599EB-F747-4129-8371-2DC7A0600AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63A599EB-F747-4129-8371-2DC7A0600AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63A599EB-F747-4129-8371-2DC7A0600AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DB8C00E-B855-41E8-BC18-C690F2FAA027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DB8C00E-B855-41E8-BC18-C690F2FAA027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DB8C00E-B855-41E8-BC18-C690F2FAA027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DB8C00E-B855-41E8-BC18-C690F2FAA027}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

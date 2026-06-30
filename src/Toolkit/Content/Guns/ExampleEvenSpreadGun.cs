@@ -1,0 +1,68 @@
+﻿using System;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.DataStructures;
+using Terraria.ID;
+using Terraria.ModLoader;
+using Toolkit.Content.Ammo;
+
+namespace Toolkit.Content.Guns;
+
+// For more implementation details, visit: https://github.com/treehouse-modding/toolkit/wiki/Example-Guns
+
+/// <summary>
+///     Provides a practical example of a gun that shoots bullets in an even spread.
+/// </summary>
+public class ExampleEvenSpreadGunItem : ModItem
+{
+    public override void SetDefaults()
+    {
+        Item.DamageType = DamageClass.Ranged;
+        
+        Item.damage = 10;
+        Item.knockBack = 1f;
+        
+        // Marks that the item does not deal any contact damage.
+        Item.noMelee = true;
+
+        // Matches the dimensions of the item's texture.
+        Item.width = 16;
+        Item.height = 16;
+
+        Item.UseSound = SoundID.Item4;
+
+        // Sets the item's use time to 15, which means the item will take 15 frames to be used.
+        Item.useTime = 15;
+        
+        // Sets the item's use animation to 15, which means the item's animation will last for 15 frames.
+        Item.useAnimation = 15;
+        
+        Item.useStyle = ItemUseStyleID.Shoot;
+
+        // Sets the velocity of the projectile that the item shoots, in pixels per frame.
+        Item.shootSpeed = 16f;
+
+        // Sets the type of the projectile that the item shoots.
+        Item.shoot = ModContent.ProjectileType<ExampleBulletProjectile>();
+
+        // Sets the type of ammo that the projectile item.
+        Item.useAmmo = AmmoID.Bullet;
+    }
+
+    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+    {
+        // The amount of projectiles to be shot.
+        var amount = 5;
+        
+        // The rotation of each shot, in degrees.
+        var rotation = MathHelper.ToRadians(30f);
+        
+        for (var i = 0; i < amount; i++)
+        {
+            Projectile.NewProjectile(source, position, velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (MathF.Max(amount, 1f) - 1f))), type, damage, knockback, player.whoAmI);
+        }
+        
+        // Returning false in Shoot() prevents the original projectile from being shot.
+        return false;
+    }
+}

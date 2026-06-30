@@ -1,0 +1,10 @@
+<Project>
+    
+    <Import Project="Mod.props"/>
+
+    <PropertyGroup>
+        <RootNamespace>Toolkit</RootNamespace>
+        <AssemblyName>Toolkit</AssemblyName>
+    </PropertyGroup>
+
+</Project>
