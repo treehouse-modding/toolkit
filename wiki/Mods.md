@@ -1,3 +1,9 @@
+# Summary
+
+1. [Introduction](#introduction)
+2. [Availability](#availability)
+3. [Mods](#mods)
+
 # Introduction
 
 This page lists popular tModLoader mods alongside their license, availability, status and repository.

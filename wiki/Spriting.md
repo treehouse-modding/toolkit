@@ -12,6 +12,9 @@
 
 # Introduction
 
+> [!IMPORTANT]
+> Terraria uses a **2×2 pixel scale**, meaning each pixel in your artwork represents a **2×2** block of screen pixels in-game. To preserve the intended appearance, create your sprites at their native resolution and export them at **200%** scale.
+
 // TODO: Introduction
 
 # Tiles
