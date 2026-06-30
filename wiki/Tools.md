@@ -1,19 +1,19 @@
 # Summary
 
-* [Prerequisites](#prerequisites)
-* [Introduction](#introduction)
-* [Pickaxes](#pickaxes)
+1. [Prerequisites](#prerequisites)
+2. [Introduction](#introduction)
+3. [Pickaxes](#pickaxes)
     * [Example](#example-1)
     * [Vanilla References](#vanilla-references)
-* [Axes](#axes)
+4. [Axes](#axes)
     * [Example](#example-1)
     * [Vanilla References](#vanilla-references-1)
-* [Hammers](#hammers)
+5. [Hammers](#hammers)
     * [Example](#example-2)
     * [Vanilla References](#vanilla-references-2)
-* [Drills](#drills)
+6. [Drills](#drills)
     * [Vanilla References](#vanilla-references-3)
-* [Multi-tools](#multi-tools)
+7. [Multi-tools](#multi-tools)
     * [Example](#example-4)
 
 # Prerequisites

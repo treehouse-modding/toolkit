@@ -1,6 +1,9 @@
 # Summary
 
-## `TileID.Containers`
+1. [`TileID.Containers`](#tileidcontainers)
+2. [`TileID.Containers2`](#tileidcontainers2)
+
+# `TileID.Containers`
 
 | Chest | Index | Frame | Type |
 | --- | --- | --- | --- |
@@ -60,7 +63,7 @@
 | Crystal | 53 | `53 * 36` | `TileID.Containers` |
 | Golden | 54 | `54 * 36` | `TileID.Containers` |
 
-## `TileID.Containers2`
+# `TileID.Containers2`
 
 | Chest | Index | Frame | Type |
 | --- | --- | --- | --- |
