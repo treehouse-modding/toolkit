@@ -43,7 +43,7 @@ Pickaxes are items that use the `Item.pick` field. The value stored in `Item.pic
 ```cs
 public override void SetDefaults()
 {
-    // Sets the power of the pickaxe.
+    // Sets the pickaxe power of the item.
     Item.pick = 50;
 }
 ```
@@ -96,7 +96,7 @@ Axes are items that use the `Item.axe` field. Unlike most tool power values, axe
 ```cs
 public override void SetDefaults()
 {
-    // Sets the power of the axe. This value is multiplied by 5, so setting this to 5 actually makes it have 25% axe power.
+    // Sets the axe power of the item.
     Item.axe = 5;
 }
 ```
@@ -150,7 +150,7 @@ Hammers are tools that use the `Item.hammer` field. The value stored in `Item.ha
 ```cs
 public override void SetDefaults()
 {
-    // Sets the power of the hammer.
+    // Sets the hammer power of the item.
     Item.hammer = 50;
 }
 ```
@@ -234,7 +234,7 @@ public override void SetDefaults()
     // Sets the pickaxe power of the item.
     Item.pick = 50;
 
-    // Sets the axe power of the item. This value is multiplied by 5, so setting this to 5 actually makes it have 25% axe power.
+    // Sets the axe power of the item.
     Item.axe = 5;
 
     // Sets the hammer power of the item.
