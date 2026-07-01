@@ -1,7 +1,7 @@
-# Summary
-
 > [!NOTE]
 > [**Click here to view full implementation**](https://github.com/treehouse-modding/toolkit/blob/main/Content/Biomes/ExampleGrass.cs).
+
+# Summary
 
 * [Prerequisites](#prerequisites)
 * [Introduction](#introduction)

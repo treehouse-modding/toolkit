@@ -1,7 +1,10 @@
 # Summary
 
-1. [`TileID.Containers`](#tileidcontainers)
-2. [`TileID.Containers2`](#tileidcontainers2)
+1. [Introduction](#introduction)
+2. [`TileID.Containers`](#tileidcontainers)
+3. [`TileID.Containers2`](#tileidcontainers2)
+
+# Introduction
 
 # `TileID.Containers`
 
