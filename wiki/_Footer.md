@@ -1,12 +1,13 @@
 <table>
     <td>
-        <img src="https://raw.githubusercontent.com/treehouse-modding/.github/main/assets/icon.svg" alt="Icon" width="128">
+        <img src="https://raw.githubusercontent.com/treehouse-modding/.github/main/assets/icon.svg" alt="Icon" width="64px">
     </td>
     <td>
         <strong>Toolkit</strong>
-        <br>
+        <br/>
         <sub>
             A collection of practical examples and resources for developing tModLoader mods.
+            <br/>
             <a href="https://github.com/treehouse-modding/toolkit">
                 Repository
             </a> 
